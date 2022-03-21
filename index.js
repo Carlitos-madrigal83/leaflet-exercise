@@ -4,7 +4,7 @@ const long = -118.243683;
 var map = L.map("mapid").setView([lat, long], 13);
 
 // 2. Add Layer from mapbox
-const MAPBOX_TOKEN = 'pk.eyJ1IjoiY2FybG9zbWFkcmlnYWw4MyIsImEiOiJjbDB2ZGZucGYwbW00M2NrYmM4Mmo2M2Y5In0.V9SV-eNtPYBp_MokuX-hYQ';
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiY2FybG9zbWFkcmlnYWw4MyIsImEiOiJjbDExMjhiaTYwM2FhM2pzOWN3dDlieThzIn0.kM7Ny5sOQskb4ZoWOvIosQ';
 
 L.tileLayer(
   `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}`,
@@ -28,8 +28,7 @@ function metroBus(){
       const resultado = [lat, long];
       console.log(resultado)
       
-      L.marker([lat, long]).bindPopup('Prueba').addTo(map)
-      //console.log(map)
+      L.marker([lat, long]).bindPopup(element.id).addTo(map)
 
     }));
     setTimeout(metroBus, 5000);
